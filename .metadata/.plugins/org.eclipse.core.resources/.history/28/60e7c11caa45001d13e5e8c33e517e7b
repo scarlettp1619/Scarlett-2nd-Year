@@ -11,8 +11,6 @@ public class Main {
 		// rock.getSize() for size
 		// rock.getType() for type
 		// rock.rockValue() for value
-		// size.toString() for size as string
-		// type.toString() for type as string
 		
 	}
 }

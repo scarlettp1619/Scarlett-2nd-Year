@@ -14,5 +14,7 @@ public class Main {
 		// size.toString() for size as string
 		// type.toString() for type as string
 		
+		System.out.println(rock.toString());
+		
 	}
 }

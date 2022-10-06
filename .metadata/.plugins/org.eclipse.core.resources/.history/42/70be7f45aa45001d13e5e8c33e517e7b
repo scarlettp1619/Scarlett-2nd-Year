@@ -6,9 +6,21 @@ public class Ugg {
 
 	public enum UggRockSize {
 
-		BIGUN((short) 5),
-		QUITE_BIGUN((short) 3),
-		NOT_SO_BIGUN((short) 1);
+		BIGUN((short) 5) {
+			public String toString() {
+				return "Bigun";
+			}
+		},
+		QUITE_BIGUN((short) 3) {
+			public String toString() {
+				return "Quite-Bigun";
+			}
+		},
+		NOT_SO_BIGUN((short) 1) {
+			public String toString() {
+				return "Not-So-Bigun";
+			}
+		};
 
 		private short multiplierValue;
 
@@ -38,10 +50,26 @@ public class Ugg {
 
 	public enum UggRockType {
 
-		SPECKILY((short) 7),
-		OUCHY_BLACK((short) 20),
-		FLOATY((short) 2),
-		HOT_HOT_HOT((short) 15);
+		SPECKILY((short) 7) {
+			public String toString() {
+				return "Speckily";
+			}
+		},
+		OUCHY_BLACK((short) 20) {
+			public String toString() {
+				return "Ouchy-Black";
+			}
+		},
+		FLOATY((short) 2) {
+			public String toString() {
+				return "Floaty";
+			}
+		},
+		HOT_HOT_HOT((short) 15) {
+			public String toString() {
+				return "Hot-Hot-Hot";
+			}
+		};
 
 		private short multiplierValue;
 
