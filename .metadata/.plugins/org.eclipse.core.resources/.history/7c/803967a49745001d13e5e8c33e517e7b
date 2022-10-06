@@ -5,12 +5,11 @@ import com.uggrock.balls.scarlett.Ugg.*;
 public class Main {
 
 	public static void main(String args[]) {
-		
-		UggRock rock = Ugg.drawRock();
-		
-		// rock.getSize() for size
-		// rock.getType() for type
-		// rock.rockValue() for value
-		
+
+		UggRockSize size;
+		UggRockType type;
+		UggRock rock = Ugg.drawRock(size, type);
+
+		System.out.println(String.valueOf(rock.rockValue()));
 	}
 }

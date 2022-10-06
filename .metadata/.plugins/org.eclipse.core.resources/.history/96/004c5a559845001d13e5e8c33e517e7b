@@ -12,5 +12,7 @@ public class Main {
 		// rock.getType() for type
 		// rock.rockValue() for value
 		
+
+		System.out.println(rock.getSize());
 	}
 }

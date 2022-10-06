@@ -109,6 +109,8 @@ public class Ugg {
 		double rockSize = r.nextDouble();
 		double rockType = r.nextDouble();
 		
+		System.out.println(String.valueOf(rockSize));
+		
 		if (rockSize < (double)1/6) {
 			size = UggRockSize.BIGUN;
 		} else if (rockSize < (double)1/3 && rockSize >= (double)1/6) {
