@@ -6,7 +6,8 @@ public class Main {
 
 	public static void main(String args[]) {
 		
-		UggRock rock = Ugg.drawRock();
+		Ugg ugg = new Ugg();
+		UggRock rock = ugg.drawRock();
 		
 		// rock.getSize() for size
 		// rock.getType() for type

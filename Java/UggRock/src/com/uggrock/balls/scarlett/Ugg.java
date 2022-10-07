@@ -6,9 +6,7 @@ public class Ugg {
 
 	public enum UggRockSize {
 
-		BIGUN((short) 5),
-		QUITE_BIGUN((short) 3),
-		NOT_SO_BIGUN((short) 1);
+		BIGUN((short) 5), QUITE_BIGUN((short) 3), NOT_SO_BIGUN((short) 1);
 
 		private short multiplierValue;
 
@@ -16,32 +14,26 @@ public class Ugg {
 			this.multiplierValue = multiplierValue;
 		}
 
-		public String toString() {
-			UggRockSize[] sizeVals = UggRockSize.values();
-			for (UggRockSize size : sizeVals) {
-				switch (size) {
-				case BIGUN:
-					return "Bigun";
-				case QUITE_BIGUN:
-					return "Quite-Bigun";
-				case NOT_SO_BIGUN:
-					return "Not-So-Bigun";
-				}
-			}
-			return null;
-		}	
-
 		public short getMultiplier() {
 			return multiplierValue;
+		}
+		
+		public String toString() {
+			switch(multiplierValue) {
+			case 5:
+				return "Bigun";
+			case 3:
+				return "Quite Bigun";
+			case 1:
+				return "Not So Bigun";
+			}
+			return null;
 		}
 	}
 
 	public enum UggRockType {
 
-		SPECKILY((short) 7),
-		OUCHY_BLACK((short) 20),
-		FLOATY((short) 2),
-		HOT_HOT_HOT((short) 15);
+		SPECKILY((short) 7), OUCHY_BLACK((short) 20), FLOATY((short) 2), HOT_HOT_HOT((short) 15);
 
 		private short multiplierValue;
 
@@ -49,29 +41,26 @@ public class Ugg {
 			this.multiplierValue = multiplierValue;
 		}
 
-		public String toString() {
-			UggRockType[] typeVals = UggRockType.values();
-			for (UggRockType type : typeVals) {
-				switch (type) {
-				case SPECKILY:
-					return "Speckily";
-				case OUCHY_BLACK:
-					return "Ouchy-Black";
-				case FLOATY:
-					return "Floaty";
-				case HOT_HOT_HOT:
-					return "Hot-Hot-Hot";
-				}
-			}
-			return null;
-		}
-
 		public short getMultiplier() {
 			return multiplierValue;
 		}
+		
+		public String toString() {
+			switch (multiplierValue) {
+			case 7:
+				return "Speckily";
+			case 20:
+				return "Ouchy Black";
+			case 2:
+				return "Floaty";
+			case 15:
+				return "Hot Hot Hot";
+			}
+			return null;
+		}
 	}
 
-	public static class UggRock {
+	public class UggRock {
 
 		private UggRockSize size;
 		private UggRockType type;
@@ -98,8 +87,8 @@ public class Ugg {
 		}
 
 	}
-		
-	public static UggRock drawRock() {
+
+	public UggRock drawRock() {
 
 		/*
 		 * not-so-biguns 3x more than quite-biguns (6x more than biguns) quite-biguns 2x
@@ -134,7 +123,6 @@ public class Ugg {
 		}
 
 		UggRock rock = new UggRock(size, type);
-
 		return rock;
 	}
 }
