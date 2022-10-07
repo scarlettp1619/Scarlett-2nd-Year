@@ -29,7 +29,7 @@ public class Ugg {
 				}
 			}
 			return null;
-		}
+		}	
 
 		public short getMultiplier() {
 			return multiplierValue;
@@ -98,7 +98,7 @@ public class Ugg {
 		}
 
 	}
-
+		
 	public static UggRock drawRock() {
 
 		/*
