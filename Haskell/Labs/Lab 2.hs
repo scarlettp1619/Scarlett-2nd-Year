@@ -4,15 +4,15 @@ import Data.List as L
 main :: IO ()
 main = do
 -- L.union can be used to output the union of two lists (Data.List) --
-    print $ L.union [3, 4, 5, 6] [6, 7, 8, 9]
+    print $ unionSetB [3, 4, 5, 6] [6, 7, 8, 9]
 -- L.intersect can be used to output the intersection of two lists (Data.List) --
-    print $ L.intersect [3, 4, 5, 6] [6, 7, 8, 9]
+    print $ intersectSetB [3, 4, 5, 6] [6, 7, 8, 9]
 
-memberSet :: Int -> [Int] -> Bool
+memberSet :: Eq a => a -> [a] -> Bool
 memberSet e []
   = False
 memberSet e (x:xs)
-  | e == x = True
+  | x == e = True
   | otherwise = memberSet e xs
 
 unionSet :: [Int] -> [Int] -> [Int]
@@ -32,6 +32,13 @@ intersectSet [] _
 intersectSet (x:xs) e
   | elem x e = x : intersectSet xs e
   | otherwise = intersect xs e
+
+intersectSetB :: Eq a => [a] -> [a] -> [a]
+intersectSetB [] ys
+  = []
+intersectSetB (x:xs) ys
+  | memberSet x ys = x : intersectSetB xs ys
+  | otherwise = intersectSetB xs ys
 
 takeList :: Int -> [Int] -> [Int]
 takeList 0 x
