@@ -1,4 +1,4 @@
-package com.uggrock.balls.scarlett;
+package com.scarlett.softdev;
 
 public class FlagExample extends Thread{
 	private volatile boolean done = false;

@@ -1,6 +1,6 @@
-package com.uggrock.balls.scarlett;
+package com.scarlett.softdev;
 
-import com.uggrock.balls.scarlett.Ugg.UggRock;
+import com.scarlett.softdev.Ugg.UggRock;
 
 public class Main{
 
@@ -32,7 +32,7 @@ public class Main{
 		
 	}
 	
-	public static void drawTwenty() {
+	public static void drawTwenty(){
 		for (int i = 0; i < 20; i++) {
 			Ugg ugg = new Ugg();
 			UggRock rock = ugg.drawRock(); // draws rock

@@ -1,3 +1,3 @@
 module UggRock {
-	exports com.uggrock.balls.scarlett;
+	exports com.scarlett.softdev;
 }

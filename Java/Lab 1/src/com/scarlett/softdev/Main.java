@@ -1,6 +1,6 @@
-package com.uggrock.balls.scarlett;
+package com.scarlett.softdev;
 
-import com.uggrock.balls.scarlett.Ugg.*;
+import com.scarlett.softdev.Ugg.*;
 
 public class Main {
 

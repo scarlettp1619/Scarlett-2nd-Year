@@ -1,4 +1,4 @@
-package com.uggrock.balls.scarlett;
+package com.scarlett.softdev;
 
 import java.util.Random;
 

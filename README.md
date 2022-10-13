@@ -1,2 +1,2 @@
 # Scarlett 2nd Year
- all the programming shit
+Software Development, Comp Lang + Haskell exercises

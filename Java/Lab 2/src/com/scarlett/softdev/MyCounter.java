@@ -1,4 +1,4 @@
-package com.uggrock.balls.scarlett;
+package com.scarlett.softdev;
 
 public class MyCounter {
 	private int count = 0;
