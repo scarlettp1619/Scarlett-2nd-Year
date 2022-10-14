@@ -3,23 +3,21 @@ package com.scarlett.softdev;
 import com.scarlett.softdev.Ugg.UggRock;
 
 public class Main{
-
+	
 	public static void main(String args[]) {
 		
 		// anonymous class thread
-		Thread a = new Thread() {
+		Thread a = new Thread(new Runnable() {
 			public void run() {
-				drawTwenty();
-				this.interrupt();
+				drawRocks(20);
 			}
-		};
+		});
 
-		Thread b = new Thread() {
+		Thread b = new Thread(new Runnable() {
 			public void run() {
-				drawTwenty();
-				this.interrupt();
+				drawRocks(20);
 			}
-		};
+		});
 		
 		a.start();
 		b.start();
@@ -32,13 +30,12 @@ public class Main{
 		
 	}
 	
-	public static void drawTwenty(){
-		for (int i = 0; i < 20; i++) {
+	public static void drawRocks(int x){
+		for (int i = 0; i < x; i++) {
 			Ugg ugg = new Ugg();
 			UggRock rock = ugg.drawRock(); // draws rock
 			System.out.println(Thread.currentThread().getName() + ": type - "
 							+ rock.getType() + ", size - " + rock.getSize());
 		}
-	}
-		
+	}	
 }
